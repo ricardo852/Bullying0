@@ -1,0 +1,26 @@
+
+/* Importar estilos base */
+@import url('../../styles.css');
+
+/* Estilos específicos para la página de registro */
+.register-container {
+    padding: 20px 0;
+}
+
+/* Campos con errores */
+input.invalid {
+    border-color: var(--error-color);
+}
+
+#password-error {
+    display: none;
+}
+
+#success-message a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+#success-message a:hover {
+    text-decoration: underline;
+}

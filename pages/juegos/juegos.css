@@ -1,0 +1,230 @@
+
+/* Importar estilos base */
+@import url('../../styles.css');
+@import url('../inicio/inicio.css');
+@import url('../que-es/que-es.css');
+
+/* Estilos específicos para la página de juegos */
+.games-intro {
+    background-color: #f0f5ff;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.game-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-header {
+    background: linear-gradient(120deg, var(--primary-color) 0%, #6a8cff 100%);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.game-header h3 {
+    margin: 0 0 10px;
+    color: white;
+}
+
+.game-content {
+    padding: 25px;
+}
+
+.game-start {
+    text-align: center;
+}
+
+.game-start p {
+    margin-bottom: 20px;
+}
+
+/* Estilos para Trivia */
+.trivia-counter, .tf-counter, .sit-counter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+}
+
+.trivia-question, .tf-statement, .sit-scenario {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.trivia-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.option-btn.selected {
+    background-color: #e6efff;
+    border-color: var(--primary-color);
+}
+
+.option-btn.correct {
+    background-color: #dff0d8;
+    border-color: #5cb85c;
+}
+
+.option-btn.incorrect {
+    background-color: #f2dede;
+    border-color: #d9534f;
+}
+
+.trivia-feedback, .tf-feedback, .sit-feedback {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.trivia-nav, .tf-nav, .sit-nav {
+    text-align: center;
+}
+
+/* Estilos para Verdadero o Falso */
+.tf-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tf-btn {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+#btn-true {
+    background-color: #5cb85c;
+    color: white;
+}
+
+#btn-false {
+    background-color: #d9534f;
+    color: white;
+}
+
+.tf-btn:hover {
+    opacity: 0.9;
+}
+
+.tf-btn.selected {
+    box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--primary-color);
+}
+
+/* Estilos para Situaciones */
+.sit-scenario {
+    font-style: italic;
+}
+
+.sit-question {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.sit-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Resultados */
+.game-result {
+    text-align: center;
+}
+
+.game-result h4 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+#trivia-message, #tf-message, #sit-message {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f0f5ff;
+}
+
+/* Footer de juegos */
+.games-footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.games-footer h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.games-footer p {
+    margin-bottom: 15px;
+}
+
+.games-footer .action-buttons {
+    margin-top: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .games-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tf-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tf-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,246 @@
+
+/* Importar estilos base */
+@import url('../../styles.css');
+@import url('../inicio/inicio.css');
+@import url('../que-es/que-es.css');
+
+/* Estilos específicos para la página Evitar Agredir */
+.intro-message {
+    background: linear-gradient(120deg, var(--primary-color) 0%, #6a8cff 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.intro-message h3 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.intro-message p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Sección de comprensión */
+.understanding-section {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 30px;
+    margin: 30px 0 40px;
+}
+
+.understanding-text ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.understanding-text li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.reflection-box {
+    background-color: #f5f8ff;
+    border: 1px solid #dce4ff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.reflection-box h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.reflection-box ul {
+    padding-left: 20px;
+}
+
+.reflection-box li {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* Pasos para el cambio */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0 40px;
+}
+
+.change-step {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.change-step:hover {
+    transform: translateY(-5px);
+}
+
+.step-icon {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.step-content {
+    padding: 25px;
+}
+
+.step-content h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.step-content p {
+    margin-bottom: 15px;
+}
+
+.action-idea {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+/* Sección de habilidades */
+.skills-section {
+    margin: 40px 0;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.skill-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--primary-color);
+}
+
+.skill-card h4 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.example-box, .technique-list, .steps-list {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
+
+.technique-list ul, .steps-list ol {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.technique-list li, .steps-list li {
+    margin-bottom: 5px;
+}
+
+/* Mitos y realidades */
+.myth-facts {
+    margin: 40px 0;
+}
+
+.myth-fact-container {
+    margin-top: 25px;
+}
+
+.myth-fact-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.myth, .fact {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.myth {
+    background-color: #fff5f5;
+    border-left: 4px solid #e74c3c;
+}
+
+.fact {
+    background-color: #f0f9ff;
+    border-left: 4px solid #3498db;
+}
+
+.myth h4, .fact h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.myth h4 {
+    color: #e74c3c;
+}
+
+.fact h4 {
+    color: #3498db;
+}
+
+/* Mensaje final */
+.message-box {
+    background-color: #f0f5ff;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.message-box h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.message-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.message-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .understanding-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .myth-fact-item {
+        grid-template-columns: 1fr;
+    }
+    
+    .myth, .fact {
+        margin-bottom: 10px;
+    }
+}

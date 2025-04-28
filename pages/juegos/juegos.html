@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos - Bully Be Kind</title>
+    <link rel="stylesheet" href="juegos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Bully Be Kind</h1>
+                <p>Una iniciativa para combatir el bullying</p>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="../inicio/inicio.html">Inicio</a></li>
+                    <li><a href="../que-es/que-es.html">¿Qué es?</a></li>
+                    <li><a href="../prevencion/prevencion.html">Prevención</a></li>
+                    <li><a href="../como-ayudarlos/como-ayudarlos.html">Cómo Ayudar</a></li>
+                    <li><a href="../evitar-agredir/evitar-agredir.html">Evitar Agredir</a></li>
+                    <li><a href="juegos.html" class="active">Juegos</a></li>
+                </ul>
+                <div class="user-menu">
+                    <span id="user-greeting">Hola, Usuario</span>
+                    <button id="logout-btn" class="btn btn-small">Salir</button>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <section class="page-header">
+                <h2>Juegos Educativos</h2>
+                <p>Aprendamos sobre el bullying de forma divertida</p>
+            </section>
+            
+            <section class="content-section">
+                <div class="content-wrapper">
+                    <div class="games-intro">
+                        <h3>Aprender jugando</h3>
+                        <p>Los juegos son una manera entretenida de reforzar conceptos importantes sobre el bullying y desarrollar habilidades sociales. ¡Explora nuestros juegos educativos!</p>
+                    </div>
+                    
+                    <div class="games-container">
+                        <!-- Juego 1: Trivia sobre el bullying -->
+                        <div class="game-card" id="trivia-game">
+                            <div class="game-header">
+                                <h3>Trivia Anti-Bullying</h3>
+                                <p>Pon a prueba tus conocimientos sobre bullying respondiendo preguntas.</p>
+                            </div>
+                            <div class="game-content">
+                                <div class="game-start" id="trivia-start">
+                                    <p>¿Cuánto sabes sobre el bullying? Responde correctamente a las preguntas y gana puntos.</p>
+                                    <button class="btn btn-primary start-btn" data-game="trivia">Comenzar Juego</button>
+                                </div>
+                                
+                                <div class="game-play" id="trivia-play" style="display: none;">
+                                    <div class="trivia-counter">
+                                        <span>Pregunta <span id="trivia-current">1</span> de <span id="trivia-total">10</span></span>
+                                        <span>Puntos: <span id="trivia-score">0</span></span>
+                                    </div>
+                                    
+                                    <div class="trivia-question" id="trivia-question"></div>
+                                    
+                                    <div class="trivia-options" id="trivia-options"></div>
+                                    
+                                    <div class="trivia-feedback" id="trivia-feedback"></div>
+                                    
+                                    <div class="trivia-nav">
+                                        <button class="btn btn-secondary" id="trivia-next" style="display: none;">Siguiente Pregunta</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="game-result" id="trivia-result" style="display: none;">
+                                    <h4>¡Juego completado!</h4>
+                                    <p>Tu puntuación final: <span id="trivia-final-score">0</span> puntos</p>
+                                    <div id="trivia-message"></div>
+                                    <button class="btn btn-primary restart-btn" data-game="trivia">Jugar de nuevo</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Juego 2: Verdadero o Falso -->
+                        <div class="game-card" id="true-false-game">
+                            <div class="game-header">
+                                <h3>Verdadero o Falso</h3>
+                                <p>Identifica si las afirmaciones sobre el bullying son verdaderas o falsas.</p>
+                            </div>
+                            <div class="game-content">
+                                <div class="game-start" id="true-false-start">
+                                    <p>Lee cada afirmación y decide si es verdadera o falsa. ¡Demuestra cuánto sabes sobre el bullying!</p>
+                                    <button class="btn btn-primary start-btn" data-game="true-false">Comenzar Juego</button>
+                                </div>
+                                
+                                <div class="game-play" id="true-false-play" style="display: none;">
+                                    <div class="tf-counter">
+                                        <span>Afirmación <span id="tf-current">1</span> de <span id="tf-total">10</span></span>
+                                        <span>Puntos: <span id="tf-score">0</span></span>
+                                    </div>
+                                    
+                                    <div class="tf-statement" id="tf-statement"></div>
+                                    
+                                    <div class="tf-options">
+                                        <button class="btn tf-btn" id="btn-true">Verdadero</button>
+                                        <button class="btn tf-btn" id="btn-false">Falso</button>
+                                    </div>
+                                    
+                                    <div class="tf-feedback" id="tf-feedback"></div>
+                                    
+                                    <div class="tf-nav">
+                                        <button class="btn btn-secondary" id="tf-next" style="display: none;">Siguiente Afirmación</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="game-result" id="true-false-result" style="display: none;">
+                                    <h4>¡Juego completado!</h4>
+                                    <p>Tu puntuación final: <span id="tf-final-score">0</span> puntos</p>
+                                    <div id="tf-message"></div>
+                                    <button class="btn btn-primary restart-btn" data-game="true-false">Jugar de nuevo</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Juego 3: Situaciones y Decisiones -->
+                        <div class="game-card" id="situations-game">
+                            <div class="game-header">
+                                <h3>¿Qué Harías Tú?</h3>
+                                <p>Analiza situaciones de bullying y elige la mejor respuesta.</p>
+                            </div>
+                            <div class="game-content">
+                                <div class="game-start" id="situations-start">
+                                    <p>Te presentaremos diferentes situaciones relacionadas con el bullying y deberás elegir la mejor forma de actuar.</p>
+                                    <button class="btn btn-primary start-btn" data-game="situations">Comenzar Juego</button>
+                                </div>
+                                
+                                <div class="game-play" id="situations-play" style="display: none;">
+                                    <div class="sit-counter">
+                                        <span>Situación <span id="sit-current">1</span> de <span id="sit-total">5</span></span>
+                                        <span>Puntos: <span id="sit-score">0</span></span>
+                                    </div>
+                                    
+                                    <div class="sit-scenario" id="sit-scenario"></div>
+                                    
+                                    <div class="sit-question">¿Qué harías en esta situación?</div>
+                                    
+                                    <div class="sit-options" id="sit-options"></div>
+                                    
+                                    <div class="sit-feedback" id="sit-feedback"></div>
+                                    
+                                    <div class="sit-nav">
+                                        <button class="btn btn-secondary" id="sit-next" style="display: none;">Siguiente Situación</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="game-result" id="situations-result" style="display: none;">
+                                    <h4>¡Juego completado!</h4>
+                                    <p>Tu puntuación final: <span id="sit-final-score">0</span> puntos</p>
+                                    <div id="sit-message"></div>
+                                    <button class="btn btn-primary restart-btn" data-game="situations">Jugar de nuevo</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="games-footer">
+                        <h3>¿Por qué aprender jugando?</h3>
+                        <p>Los juegos educativos son una herramienta poderosa para comprender mejor el bullying y desarrollar empatía y habilidades sociales de manera interactiva.</p>
+                        <p>Recuerda que estos juegos son una forma divertida de aprender, pero si necesitas ayuda real con situaciones de bullying, habla con un adulto de confianza.</p>
+                        <div class="action-buttons">
+                            <a href="../inicio/inicio.html" class="btn btn-primary">Volver al Inicio</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="../inicio/inicio.html">Inicio</a></li>
+                        <li><a href="../que-es/que-es.html">¿Qué es?</a></li>
+                        <li><a href="../prevencion/prevencion.html">Prevención</a></li>
+                        <li><a href="../como-ayudarlos/como-ayudarlos.html">Cómo Ayudar</a></li>
+                        <li><a href="../evitar-agredir/evitar-agredir.html">Evitar Agredir</a></li>
+                        <li><a href="juegos.html">Juegos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p>Si necesitas ayuda inmediata, habla con un adulto de confianza o contacta:</p>
+                    <p>Línea de Ayuda: 800-123-4567</p>
+                    <p>Email: ayuda@bullybekind.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Bully Be Kind - Todos los derechos reservados</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="juegos.js"></script>
+</body>
+</html>
